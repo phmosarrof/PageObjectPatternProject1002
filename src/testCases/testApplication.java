@@ -5,8 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-import pageObjects.HomePage;
-import pageObjects.loginPage;
+//import pageObjects.HomePage;
+//import pageObjects.HomePageFactory;
+//import pageObjects.loginPage;
+import pageObjects.loginPageFactory;
 
 public class testApplication {
 
@@ -19,9 +21,9 @@ public class testApplication {
 	driver.get("https://mail.rediff.com/cgi-bin/login.cgi");
 	driver.manage().window().maximize();
 	
-	loginPage obj = new loginPage(driver);
+	/*loginPage obj = new loginPage(driver);
 	obj.userName().sendKeys("phmosharaf");
-	obj.password().sendKeys("469+95+699+");
+	obj.password().sendKeys("44582155");
 	//obj.submit().click();
 	obj.home().click();
 	
@@ -31,7 +33,19 @@ public class testApplication {
 	obj1.SerachSubmit().sendKeys("Polo shirt");
 	obj1.submit().click();
 	
+	
+	HomePageFactory obj2= new HomePageFactory();
+	obj2.Serach().click();
+	obj2.SerachSubmit().sendKeys("New product");
+	*/
+	loginPageFactory obj3 = new loginPageFactory(driver);
+	obj3.userName().sendKeys("phmosarrof");
+	obj3.password().sendKeys("12668");
+	obj3.submit().click();
+	obj3.home().click();
+	
 	driver.quit();
+	
 	}
 }
  
