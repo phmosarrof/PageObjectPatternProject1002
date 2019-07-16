@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import pageObjects.HomePageFactory;
 //import pageObjects.HomePage;
 //import pageObjects.HomePageFactory;
 //import pageObjects.loginPage;
@@ -13,12 +14,12 @@ import pageObjects.loginPageFactory;
 public class testApplication {
 
 	
-	@Test
+	@Test 
 	public void login() {
 		
 	System.setProperty("webdriver.chrome.driver", "C:/Users/Mosarrof Hossain/Utilities/chromedriver.exe");
 	WebDriver driver = new ChromeDriver();
-	driver.get("https://mail.rediff.com/cgi-bin/login.cgi");
+	driver.get("https://mail.rediff.com");
 	driver.manage().window().maximize();
 	
 	/*loginPage obj = new loginPage(driver);
@@ -33,11 +34,11 @@ public class testApplication {
 	obj1.SerachSubmit().sendKeys("Polo shirt");
 	obj1.submit().click();
 	
-	
-	HomePageFactory obj2= new HomePageFactory();
+	*/
+	HomePageFactory obj2= new HomePageFactory(driver);
 	obj2.Serach().click();
 	obj2.SerachSubmit().sendKeys("New product");
-	*/
+	
 	loginPageFactory obj3 = new loginPageFactory(driver);
 	obj3.userName().sendKeys("phmosarrof");
 	obj3.password().sendKeys("12668");

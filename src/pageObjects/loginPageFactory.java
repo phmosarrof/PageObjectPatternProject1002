@@ -15,9 +15,10 @@ public class loginPageFactory {
 		PageFactory.initElements(driver, this);
 	}
 
-
 	@FindBy(xpath="//*[@id=\'login1\']")
 	WebElement UserId;
+
+
 	@FindBy(xpath="//*[@id=\'password\']")
 	WebElement Password;
 	@FindBy(name="proceed")
