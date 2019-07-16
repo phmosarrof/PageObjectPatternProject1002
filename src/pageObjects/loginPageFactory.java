@@ -9,43 +9,41 @@ import org.openqa.selenium.support.PageFactory;
 public class loginPageFactory {
 
 	WebDriver driver;
+
 	public loginPageFactory(WebDriver driver) {
 
-		//this.driver = driver;
+		// this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath="//*[@id=\'login1\']")
+	@FindBy(xpath = "//*[@id=\'login1\']")
 	WebElement UserId;
 
-
-	@FindBy(xpath="//*[@id=\'password\']")
+	@FindBy(xpath = "//*[@id=\'password\']")
 	WebElement Password;
-	@FindBy(name="proceed")
+	@FindBy(name = "proceed")
 	WebElement Submit;
-	@FindBy(xpath="/html/body/div[1]/div[1]/div[2]/a")
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div[2]/a")
 	WebElement Home;
+
 	public WebElement userName() {
 
 		return UserId;
 	}
+
 	public WebElement password() {
 
 		return Password;
 	}
+
 	public WebElement submit() {
 
 		return Submit;
 	}
+
 	public WebElement home() {
 
 		return Home;
 	}
 
-
-
-
-
 }
-
-
